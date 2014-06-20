@@ -14,6 +14,7 @@ void setup() {
     Spark.function("setMode", setMode);
     Spark.function("setFlashRate", setFlashRate);
     Spark.function("setBreatheRate", setBreatheRate);
+    Spark.function("ping", ping);
     //Serial.begin(9600);
     settings = Settings();
     noteLight = NoteLight();
@@ -74,4 +75,7 @@ int stringToInt(String args){
     args.toCharArray(msg, 256);
     int range = atoi(msg);
     return range;
+}
+int ping(String args){
+    return 0;
 }
